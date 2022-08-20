@@ -1,0 +1,11 @@
+ls:
+  .dir: kebab-case
+  .ts: kebab-case
+  .css: kebab-case
+  .test.ts: kebab-case
+ignore:
+  - .git
+  - .vscode
+  - .idea
+  - .trunk
+  - node_modules

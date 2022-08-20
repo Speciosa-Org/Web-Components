@@ -1,0 +1,28 @@
+import {
+  LitElement,
+  html,
+  type TemplateResult,
+} from 'lit';
+import {
+  property,
+} from 'lit/decorators.js';
+import {baseStyles} from './{{ kebabName }}.css.js';
+
+/**
+* Describe what the component provides.
+*/
+export class {{ jsClassName }} extends LitElement {
+  public static override styles = [baseStyles];
+
+  @property()
+  public name?: string = 'World';
+
+  /**
+  * Render the component interface.
+  *
+  * @return {TemplateResult} Content to render
+  **/
+  protected override render(): TemplateResult {
+    return html`<p>Hello, ${this.name}!</p>`;
+  }
+}

@@ -1,0 +1,33 @@
+import {
+  defineCE,
+  unsafeStatic,
+  expect,
+  fixture,
+  html,
+} from '@open-wc/testing';
+import { {{~ jsClassName ~}} } from './index.js';
+
+const tagName = defineCE({{jsClassName}});
+const tag = unsafeStatic(tagName);
+
+describe('{{jsClassName}}', function() {
+  it('works', async function() {
+    const el = await fixture(html`<${tag}></${tag}>`);
+
+    expect(
+      el.shadowRoot
+        .querySelector('p')
+        .textContent?.trim(),
+    ).to.equal('Hello, World!');
+  });
+
+  describe('Accessibility', function() {
+    it('meets baseline requirements', async function() {
+      const el = await fixture(
+        html`<${tag}></${tag}>`,
+      );
+
+      await expect(el).to.be.accessible();
+    });
+  });
+});
