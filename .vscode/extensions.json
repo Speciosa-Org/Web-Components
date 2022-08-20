@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "unifiedjs.vscode-mdx",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "foxundermoon.shell-format",
+    "bierner.lit-html",
+    "nickdemayo.vscode-json-editor",
+    "visualstudioexptteam.vscodeintellicode",
+    "oderwat.indent-rainbow",
+    "wix.vscode-import-cost",
+    "ldez.ignore-files",
+    "stylelint.vscode-stylelint",
+    "editorconfig.editorconfig",
+    "cschleiden.vscode-github-actions",
+    "ecmel.vscode-html-css",
+    "davidanson.vscode-markdownlint",
+    "ryanluker.vscode-coverage-gutters",
+    "liamhammett.inline-parameters",
+    "formulahendry.auto-rename-tag"
+  ]
+}

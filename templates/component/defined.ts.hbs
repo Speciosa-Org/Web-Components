@@ -1,0 +1,12 @@
+import { {{~ jsClassName ~}} } from './index.js';
+
+window.customElements.define(
+  '{{ tagName }}',
+  {{ jsClassName }},
+);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    '{{ tagName }}': {{ jsClassName }};
+  }
+}
