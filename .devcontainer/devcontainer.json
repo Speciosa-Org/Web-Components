@@ -2,36 +2,12 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
   "name": "Node.js & TypeScript",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+  // More info: https://containers.dev/guide/dockerfile
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "features": {
-    "ghcr.io/devcontainers/features/git:1": {
-      "ppa": true,
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/github-cli:1": {
-      "installDirectlyFromGitHubRelease": true,
-      "version": "latest"
-    },
-    "ghcr.io/devcontainers/features/node:1": {
-      "nodeGypDependencies": true,
-      "version": "18"
-    },
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {},
-    "ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
-    "ghcr.io/devcontainers-contrib/features/yamllint:2": {
-      "version": "latest"
-    },
-    "ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {
-      "jqVersion": "os-provided",
-      "yqVersion": "latest",
-      "gojqVersion": "latest"
-    },
-    "ghcr.io/dhoeric/features/act:1": {},
-    "ghcr.io/dhoeric/features/hadolint:1": {},
-    "ghcr.io/lukewiwa/features/shellcheck:0": {
-      "version": "stable"
-    }
+    "ghcr.io/dhoeric/features/act:1": {}
   },
   "customizations": {
     "vscode": {
@@ -52,7 +28,8 @@
         "cschleiden.vscode-github-actions",
         "ecmel.vscode-html-css",
         "liamhammett.inline-parameters",
-        "ryanluker.vscode-coverage-gutters"
+        "ryanluker.vscode-coverage-gutters",
+        "ms-azuretools.vscode-docker"
       ]
     }
   }
