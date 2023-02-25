@@ -52,8 +52,7 @@
         "cschleiden.vscode-github-actions",
         "ecmel.vscode-html-css",
         "liamhammett.inline-parameters",
-        "ryanluker.vscode-coverage-gutters",
-        "foxundermoon.shell-format"
+        "ryanluker.vscode-coverage-gutters"
       ]
     }
   }

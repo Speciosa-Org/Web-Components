@@ -1,0 +1,60 @@
+name: NPM Update
+on:
+  workflow_dispatch:
+  schedule:
+    # At 5:03 PM EST on Friday.
+    - cron: "3 22 * * 5"
+
+jobs:
+  update-deps:
+    name: Check for Updates
+    runs-on: ubuntu-latest
+    outputs:
+      outdated: ${{ steps.check.outputs.outdated }}
+      updatedDeps: ${{ steps.check.outputs.updatedDeps }}
+    env:
+      HEAD: ci/update/dependencies
+      TITLE: "chore: update dependencies"
+      BASE: main
+    timeout-minutes: 10
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.2.0
+    - name: Setup Node
+      uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3.6.0
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
+    - name: Check for Updates
+      id: check
+      run: ./.github/bin/npm-update.sh
+    - name: Push Updates
+      if: ${{ steps.check.outputs.outdated }}
+      id: submit
+      env:
+        COMMIT_MESSAGE: "chore: update dependencies"
+        CHECK_LOCATION: >-
+          package.json
+          package-lock.json
+      run: ./.github/bin/push-branch.sh
+    - name: Create Pull Request
+      if: ${{ steps.submit.outputs.branchHasChanges == 'true' }}
+      env:
+        BODY: |
+          This PR is auto-generated.
+
+          It updates the sensibly allowed dependencies to
+          their latest versions.
+
+          <details>
+          <summary>Updated Dependency List</summary>
+
+          ```
+            ${{ steps.check.outputs.updatedDeps }}
+          ```
+
+          </details>
+        LABELS: Automation,Dependencies
+        AUTO_MERGE: true
+      run: ./.github/bin/open-pr.sh
+

@@ -31,5 +31,6 @@
     "vue",
     "markdown",
     "json"
-  ]
+  ],
+  "shellformat.useEditorConfig": false
 }
