@@ -31,7 +31,7 @@ const concurrentBrowsers = Number.parseFloat(arguments_
 
 const requestedBrowsers = arguments_
   ?.runBrowsers
-  ?.split(',') ?? ['chromium'];
+  ?.split(',') ?? ['chromium', 'firefox', 'webkit'];
 
 const timezones = [
   'Pacific/Midway', // -11 UTC Offset
@@ -42,7 +42,9 @@ const timezones = [
 for (const browser of requestedBrowsers) {
   const uniform = browser?.toLowerCase();
   if (
-    uniform === 'chromium'
+    uniform === 'chromium' ||
+    uniform === 'firefox' ||
+    uniform === 'webkit'
   ) {
     for (const timezone of timezones) {
       browsers = [
@@ -56,7 +58,8 @@ for (const browser of requestedBrowsers) {
 if (browsers.length === 0) {
   throw new Error(
     `Cannot run tests without browsers.
-        Supported browsers are: 'chromium'`,
+     Supported browsers are:
+     'chromium', 'firefox', and 'webkit'`,
   );
 }
 

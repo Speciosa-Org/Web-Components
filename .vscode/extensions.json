@@ -16,6 +16,7 @@
     "ryanluker.vscode-coverage-gutters",
     "liamhammett.inline-parameters",
     "streetsidesoftware.code-spell-checker",
-    "ms-azuretools.vscode-docker"
+    "ms-azuretools.vscode-docker",
+    "bashmish.es6-string-css"
   ]
 }

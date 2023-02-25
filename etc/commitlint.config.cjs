@@ -12,6 +12,7 @@ module.exports = {
       errorCode,
       'always',
       [
+        'button',
         // ScopeEnumPlaceholder
       ],
     ],

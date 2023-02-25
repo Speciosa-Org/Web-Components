@@ -35,25 +35,26 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "stylelint.vscode-stylelint",
-        "dbaeumer.vscode-eslint",
-        "timonwong.shellcheck",
-        "unifiedjs.vscode-mdx",
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "bierner.lit-html",
-        "nickdemayo.vscode-json-editor",
-        "VisualStudioExptTeam.vscodeintellicode",
-        "streetsidesoftware.code-spell-checker",
-        "wix.vscode-import-cost",
-        "ldez.ignore-files",
-        "EditorConfig.EditorConfig",
-        "cschleiden.vscode-github-actions",
-        "ecmel.vscode-html-css",
-        "liamhammett.inline-parameters",
-        "ryanluker.vscode-coverage-gutters",
-        "ms-azuretools.vscode-docker"
-      ]
+		"stylelint.vscode-stylelint",
+		"dbaeumer.vscode-eslint",
+		"timonwong.shellcheck",
+		"unifiedjs.vscode-mdx",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"bierner.lit-html",
+		"nickdemayo.vscode-json-editor",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"streetsidesoftware.code-spell-checker",
+		"wix.vscode-import-cost",
+		"ldez.ignore-files",
+		"EditorConfig.EditorConfig",
+		"cschleiden.vscode-github-actions",
+		"ecmel.vscode-html-css",
+		"liamhammett.inline-parameters",
+		"ryanluker.vscode-coverage-gutters",
+		"ms-azuretools.vscode-docker",
+		"bashmish.es6-string-css"
+	]
     }
   }
   // Features to add to the dev container. More info: https://containers.dev/features.
