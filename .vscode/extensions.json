@@ -14,9 +14,8 @@
     "editorconfig.editorconfig",
     "cschleiden.vscode-github-actions",
     "ecmel.vscode-html-css",
-    "davidanson.vscode-markdownlint",
     "ryanluker.vscode-coverage-gutters",
     "liamhammett.inline-parameters",
-    "formulahendry.auto-rename-tag"
+    "streetsidesoftware.code-spell-checker"
   ]
 }

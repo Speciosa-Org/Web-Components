@@ -9,8 +9,6 @@
   "eslint.run": "onType",
   "eslint.useESLintClass": true,
   "editor.formatOnSave": true,
-  "trunk.inlineDecorators": true,
-  "trunk.inlineDecoratorsForAllExtensions": true,
   "eslint.enable": true,
   "files.trimTrailingWhitespace": true,
   "editor.tabSize": 2,
