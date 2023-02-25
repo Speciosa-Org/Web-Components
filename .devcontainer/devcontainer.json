@@ -2,12 +2,30 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
   "name": "Node.js & TypeScript",
-  // More info: https://containers.dev/guide/dockerfile
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
   "features": {
-    "ghcr.io/dhoeric/features/act:1": {}
+    "ghcr.io/devcontainers-contrib/features/act-asdf:2": {
+      "version": "latest"
+    },
+    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+      "upgradePackages": true,
+      "packages": "curl,vim,build-essential"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": false
+    },
+    "ghcr.io/devcontainers-contrib/features/bash-command:1": {
+      "command": "npx playwright install --with-deps"
+    },
+    "ghcr.io/devcontainers-contrib/features/asdf-package:1": {
+      "plugin": "actionlint"
+    },
+    "ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {},
+    "ghcr.io/dhoeric/features/hadolint:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-contrib/features/yamllint:2": {}
   },
   "customizations": {
     "vscode": {
