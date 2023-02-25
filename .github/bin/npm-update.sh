@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-if updatedDeps=$(npx --no-install npm-check-updates --configFileName=config.yml --configFilePath=etc/npm-check-updates/ --errorLevel=2); then
+updateCommand=(
+  npx
+  --no-install
+  npm-check-updates
+  --configFileName=config.yml
+  --configFilePath=etc/npm-check-updates/
+  --errorLevel=2
+)
+
+if updatedDeps=$("${updateCommand[@]}"); then
   {
     echo "# Nothing to update"
     echo ""
@@ -9,6 +18,9 @@ if updatedDeps=$(npx --no-install npm-check-updates --configFileName=config.yml 
 
   exit 0
 fi
+
+updateCommand+=("-u")
+"${updateCommand[@]}"
 
 export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=true
 npm install

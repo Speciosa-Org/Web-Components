@@ -5,6 +5,10 @@ on:
     # At 5:03 PM EST on Friday.
     - cron: "3 22 * * 5"
 
+permissions:
+  pull-requests: write
+  contents: write
+
 jobs:
   update-deps:
     name: Check for Updates
@@ -25,6 +29,8 @@ jobs:
       with:
         node-version-file: '.nvmrc'
         cache: 'npm'
+    - name: Install deps
+      run: npm ci
     - name: Check for Updates
       id: check
       run: ./.github/bin/npm-update.sh
@@ -33,6 +39,7 @@ jobs:
       id: submit
       env:
         COMMIT_MESSAGE: "chore: update dependencies"
+        GH_TOKEN: ${{ github.token }}
         CHECK_LOCATION: >-
           package.json
           package-lock.json
@@ -54,6 +61,7 @@ jobs:
           ```
 
           </details>
+        GH_TOKEN: ${{ github.token }}
         LABELS: Automation,Dependencies
         AUTO_MERGE: true
       run: ./.github/bin/open-pr.sh
