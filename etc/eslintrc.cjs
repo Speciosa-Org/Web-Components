@@ -106,6 +106,7 @@ module.exports = {
       ],
       'rules': {
         '@typescript-eslint/explicit-member-accessibility': 'error',
+        'require-jsdoc': 'off',
       },
     },
     {
