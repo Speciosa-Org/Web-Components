@@ -33,7 +33,7 @@
   "browser": "dist/index.js",
   "module": "dist/index.js",
   "dependencies": {
-    "lit": "^2.7.5"
+    "lit": "^2.7.6"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
@@ -43,15 +43,15 @@
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@open-wc/testing": "^3.2.0",
     "@trunkio/launcher": "^1.2.4",
-    "@types/web": "^0.0.102",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
-    "@web/dev-server": "^0.2.3",
+    "@types/web": "^0.0.103",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "@web/dev-server": "^0.2.5",
     "@web/dev-server-esbuild": "^0.4.1",
     "@web/test-runner": "^0.16.1",
     "@web/test-runner-playwright": "^0.10.1",
     "confusing-browser-globals": "^1.0.11",
-    "eslint": "^8.43.0",
+    "eslint": "^8.44.0",
     "eslint-config-google": "^0.14.0",
     "eslint-formatter-mo": "^1.2.0",
     "eslint-plugin-compat": "^4.1.4",
@@ -70,12 +70,12 @@
     "eslint-plugin-xss": "^0.1.12",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "npm-check-updates": "^16.10.13",
+    "npm-check-updates": "^16.10.15",
     "plop": "^3.1.2",
     "postcss-lit": "^1.1.0",
     "replace-in-file": "^7.0.1",
-    "stylelint": "^15.9.0",
-    "stylelint-config-standard": "^33.0.0",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard": "^34.0.0",
     "typescript": "^5.1.6",
     "yargs": "^17.7.2"
   }
