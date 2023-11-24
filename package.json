@@ -36,16 +36,16 @@
     "lit": "^3.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.2",
-    "@commitlint/config-conventional": "^18.4.2",
-    "@commitlint/prompt-cli": "^18.4.2",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@commitlint/prompt-cli": "^18.4.3",
     "@ls-lint/ls-lint": "^2.2.2",
     "@microsoft/eslint-formatter-sarif": "^3.0.0",
     "@open-wc/testing": "^4.0.0",
     "@trunkio/launcher": "^1.2.7",
-    "@types/web": "^0.0.119",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
+    "@types/web": "^0.0.120",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
     "@web/dev-server": "^0.4.1",
     "@web/dev-server-esbuild": "^1.0.1",
     "@web/test-runner": "^0.18.0",
@@ -70,13 +70,13 @@
     "eslint-plugin-xss": "^0.1.12",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
-    "npm-check-updates": "^16.14.6",
+    "npm-check-updates": "^16.14.11",
     "plop": "^4.0.0",
     "postcss-lit": "^1.1.0",
     "replace-in-file": "^7.0.2",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.2",
     "yargs": "^17.7.2"
   }
 }
