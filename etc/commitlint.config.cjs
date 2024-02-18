@@ -12,6 +12,14 @@ module.exports = {
       errorCode,
       'always',
       [
+        'eslint',
+        'stylelint',
+        'plop',
+        'wtr',
+        'lint-staged',
+        'husky',
+        'ls-lint',
+        'markdownlint',
         // ScopeEnumPlaceholder
       ],
     ],
